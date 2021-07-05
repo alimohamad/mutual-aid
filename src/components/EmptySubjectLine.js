@@ -1,3 +1,5 @@
+import React, { useState } from 'react'
+
 import Header from './Header'
 import Amount  from './Amount'
 import PayPal from './PayPal'
@@ -5,9 +7,9 @@ import PayPal from './PayPal'
 const EmptySubjectLine = ({ org }) => {
     const [amount, setAmount] = useState("")
 
-    amountHandler = (e) => {
+    const amountHandler = (e) => {
         e.preventDefault()
-        setAmount(parseInt(e.target.amount.value))
+        setAmount(parseFloat(e.target.amount.value))
     }
     
     return (

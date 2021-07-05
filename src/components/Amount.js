@@ -1,3 +1,5 @@
+import React from 'react'
+
 const Amount = ({ amountHandler }) => {
     return (
         <form onSubmit={amountHandler}>

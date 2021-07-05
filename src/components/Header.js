@@ -1,4 +1,8 @@
+import React from 'react'
+
 const Header = ({ org }) => {
+    
+    console.log(org.name)
     return (
         <div>
             <h1>{org.name}</h1>

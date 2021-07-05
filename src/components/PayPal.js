@@ -1,5 +1,7 @@
-const PayPal = ({ account, amount, cause }) => {
+import React from 'react'
 
+const PayPal = ({ account, amount, cause }) => {
+    console.log(cause, amount)
     return  (
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_xclick"/>
