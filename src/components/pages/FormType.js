@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import EmptySubjectLine from './EmptySubjectLine'
 import CauseForm from './CauseForm'
-import Firebase from './Firebase'
+import Firebase from '../Firebase'
 
 const FormType = ({ match }) => {
     const [org, setOrg] = useState({})
@@ -10,7 +10,7 @@ const FormType = ({ match }) => {
         // match.params.org => get org name, pass to Firebase query, set org.
         Firebase.firestore()
         .collection('funds')
-        .where("referenceName", "==", match.params.org)
+        .where("name", "==", match.params.org)
         .get()
         .then((snapshot) => {
             if(snapshot.docs.length === 1) {
