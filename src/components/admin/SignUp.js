@@ -23,7 +23,7 @@ const SignUp = () => {
 
     return (
         <div>
-            <form>
+            <form onSubmit={submitHandler}>
                 <input type="text" name="email" placeholder="Email" />
                 <input type="password" name="password" placeholder="Password" />
                 <input type="text" name="orgName" placeholder="Organization Name" />
